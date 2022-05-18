@@ -3246,6 +3246,9 @@
       "redelegate": "Redelegate",
       "reward": "Claim rewards",
       "estYield": "Est. yield",
+      "totalStake": "Total Stake",
+      "commission": "Commission",
+      "iDelegate": "I delegate",
       "stepperHeader": {
         "starter": "Earn rewards",
         "validator": "Delegate assets",
