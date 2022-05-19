@@ -38,7 +38,7 @@ function Item({
   delegatedValue,
 }: Props) {
   const { colors } = useTheme();
-  const { rank, validator } = item;
+  const { validator } = item;
 
   const { validatorAddress, estimatedYearlyRewardsRate, name } =
     validator || {};

@@ -41,7 +41,6 @@ import { ScreenName, NavigatorName } from "../../../const";
 import Circle from "../../../components/Circle";
 import LText from "../../../components/LText";
 import Button from "../../../components/Button";
-import FirstLetterIcon from "../../../components/FirstLetterIcon";
 import RedelegateIcon from "../../../icons/Redelegate";
 import UndelegateIcon from "../../../icons/Undelegate";
 import ClaimRewardIcon from "../../../icons/ClaimReward";

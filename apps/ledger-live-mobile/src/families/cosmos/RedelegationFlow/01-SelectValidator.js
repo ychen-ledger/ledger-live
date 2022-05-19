@@ -1,6 +1,6 @@
 // @flow
 import invariant from "invariant";
-import React, { useCallback, useState, useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import { View, StyleSheet, SectionList } from "react-native";
 import SafeAreaView from "react-native-safe-area-view";
 import { Trans } from "react-i18next";
@@ -22,9 +22,7 @@ import ValidatorHead from "../shared/ValidatorHead";
 
 import { accountScreenSelector } from "../../../reducers/accounts";
 import { ScreenName } from "../../../const";
-import SelectValidatorSearchBox from "../../tron/VoteFlow/01-SelectValidator/SearchBox";
 import LText from "../../../components/LText";
-import Item from "../shared/Item";
 
 type RouteParams = {
   accountId: string,
@@ -71,10 +69,6 @@ function RedelegationSelectValidator({ navigation, route }: Props) {
     transaction && transaction.cosmosSourceValidator,
     "transaction src validator required",
   );
-
-  const unit = getAccountUnit(account);
-
-  const [searchQuery, setSearchQuery] = useState("");
 
   const validators = useLedgerFirstShuffledValidatorsCosmos();
 
@@ -167,10 +161,7 @@ function RedelegationSelectValidator({ navigation, route }: Props) {
       {sections.length <= 0 && (
         <View style={styles.noResult}>
           <LText>
-            <Trans
-              i18nKey="cosmos.redelegation.flow.steps.validator.noResultsFound"
-              values={{ search: searchQuery }}
-            >
+            <Trans i18nKey="cosmos.redelegation.flow.steps.validator.noResultsFound">
               <LText bold>{""}</LText>
             </Trans>
           </LText>
